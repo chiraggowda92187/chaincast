@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User{
+  id String @id @default(uuid())
+  publicKey String @unique
+  lastLoggedIn DateTime
+  transaactions Transaction[]
+  notifications Notification[]
+}
+
+
+model Transaction{
+  id String @id @default(uuid())
+  publicKey String 
+  amount String
+  signature String 
+  type TransactionType
+  description String
+  result Boolean
+  transactionData Json
+  user User @relation(fields: [publicKey], references: [publicKey])
+  @@unique([publicKey, signature])
+}
+
+model Notification{
+  id String @id @default(uuid())
+  notificationId String
+  publicKey String
+  type NotificationType
+  user User @relation(references: [publicKey], fields: [publicKey])
+}
+
+enum NotificationType{
+  EMAIL
+  SMS
+  TELEGRAM
+}
+
+enum TransactionType{
+  PAYMENT
+  AIRDROP
+  NFT
+  TOKEN_TRANSFER
+  ESCROW
+  STAKE
+}

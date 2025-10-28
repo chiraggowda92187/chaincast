@@ -1,0 +1,9 @@
+backend/dist
+backend/node_modules
+backend/.env
+.env
+requirement.txt
+todo.txt
+
+backend/schema.txt
+backend/tsconfig.tsbuildinfo

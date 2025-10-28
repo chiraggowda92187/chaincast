@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* Core */
+    "target": "ES2022",
+    "module": "node16",
+    "moduleResolution": "node16",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Modern ESM behavior */
+    "rewriteRelativeImportExtensions": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type safety */
+    "strict": true,
+    "skipLibCheck": true,
+
+    /* Include Node + Express types */
+    "types": ["node", "express"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"],
+  "files": ["./src/types/express.d.ts"]
+}

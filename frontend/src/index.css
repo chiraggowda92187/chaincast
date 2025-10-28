@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-cryptonite: #DAFE53;
+  --color-btncolor: #121212;
+  --color-mainwhite: #F8F6EC;
+  --color-gray: #707473;
+  --color-charcoal: #121212;
+  --color-secondary: #2A2A2A;
+  --color-backgroundgray: #1F201D;
+  --color-secondGray: #848481;
+  --color-thirdgray: #A0A0A0;
+  --color-secondbackground: #1F201D;
+  --color-innerbackground: #151515;
+  --color-greenStart: #68f965;
+  --color-greenEnd: #E3FE63;
+}
