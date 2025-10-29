@@ -14,7 +14,7 @@ export const sendEmail = async (email: string, data: any) => {
         //     html: dataEmailTemplate(data)
         // })
         const res = await resend.emails.send({
-            from: `Agent Cast <onboarding@resend.dev>`,
+            from: `Agent Cast <noreply@thrive10xlabs.in>`,
             to: email,
             subject: "New Transaction Alert from ChainCast!",
             html: dataEmailTemplate(data)

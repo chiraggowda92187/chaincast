@@ -9,7 +9,7 @@ export const resend = new Resend(process.env.RESEND_API_KEY as string)
 export async function sendOtp(receipient : string, otp : number) {
     try {
         const res = await resend.emails.send({
-            from :  `Agent Cast <onboarding@resend.dev>`,
+            from: `Agent Cast <noreply@thrive10xlabs.in>`,
             to : receipient,
             subject : "OTP For ChainCast!",
             html : otpEmailTemplate(receipient, `${otp}`)
