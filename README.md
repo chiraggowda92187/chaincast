@@ -8,7 +8,8 @@ Get live updates across all your devices and receive instant notifications throu
 
 
 ## 🏗️ Architecture
-<img width="1470" height="956" alt="Screenshot 2025-10-31 at 10 09 53 AM" src="https://github.com/user-attachments/assets/269685a8-5d42-449a-820a-18b256a0f57d" />
+<img width="1482" height="846" alt="Screenshot 2025-10-31 at 10 09 53 AM (1)" src="https://github.com/user-attachments/assets/99183508-e7af-445e-81b8-0d81f51a3617" />
+
 
 
 
